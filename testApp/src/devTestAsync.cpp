@@ -23,7 +23,7 @@
 
 static long devTestAsync_readAi(aiRecord *pai);
 
-typedef void (*RECSUPFUN_PARAM)(dbCommon *pdbcommon);
+typedef void (*RECSUPFUN_DBCOMMON)(dbCommon *pdbcommon);
 
 static void devTestAsync_myCallback(CALLBACK *pcallback){
     rset *prset;
@@ -48,7 +48,7 @@ static void devTestAsync_myCallback(CALLBACK *pcallback){
 
     //(*RECSUPFUN) ();
     // Finish async processing
-    reinterpret_cast<RECSUPFUN_PARAM>((*prset->process))(precord);
+    reinterpret_cast<RECSUPFUN_DBCOMMON>((*prset->process))(precord);
 
     // Unlock
     //errlogSevPrintf(errlogInfo, "End callback processing:  %s %f", precord->name, ((aiRecord *)precord)->val);
