@@ -1,0 +1,44 @@
+record(ai, "$(device):H1"){
+        field(DTYP, "TEST_ASYNC")
+        field(FLNK, "$(device):H2")
+        field(PINI, "YES")
+        field(PREC, "2")
+        field(SCAN, "1 second")
+        field(PRIO, "HIGH")
+}
+record(ai, "$(device):H2"){
+        field(DTYP, "TEST_ASYNC")
+        field(PHAS, "0")
+        field(PREC, "2")
+        field(SCAN, "Passive")
+}
+
+record(ai, "$(device):M1"){
+        field(DTYP, "TEST_ASYNC")
+        field(FLNK, "$(device):M2")
+        field(PINI, "YES")
+        field(PREC, "2")
+        field(SCAN, "1 second")
+        field(PRIO, "MEDIUM")
+}
+record(ai, "$(device):M2"){
+        field(DTYP, "TEST_ASYNC")
+        field(PHAS, "0")
+        field(PREC, "2")
+        field(SCAN, "Passive")
+}
+
+record(ai, "$(device):L1"){
+        field(DTYP, "TEST_ASYNC")
+        field(FLNK, "$(device):L2")
+        field(PINI, "YES")
+        field(PREC, "2")
+        field(SCAN, "1 second")
+        field(PRIO, "LOW")
+}
+record(ai, "$(device):L2"){
+        field(DTYP, "TEST_ASYNC")
+        field(PHAS, "0")
+        field(PREC, "2")
+        field(SCAN, "Passive")
+}
