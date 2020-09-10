@@ -1,1 +1,11 @@
+**/Db/O.linux-x86_64/
+**/src/O.Common/
+**/src/O.linux-x86_64/
 .vscode
+bin/
+configure/O.linux-x86_64/
+db/
+dbd/
+iocBoot/iocasynTest/
+iocBoot/ioctest/envPaths
+lib/
